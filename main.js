@@ -71,10 +71,20 @@ function getFieldname(input){
 
 form.addEventListener('submit',function(e){
     e.preventDefault()
-    if(!checkEmptyError([userName,email,password,password2])){
+    let arrInput=[userName,email,password,password2]
+    if(!checkEmptyError(arrInput)){
+        let checkSucceed=document.querySelectorAll('.success')
         checkLength(userName,3,12)
         checkLength(password,6,15)
         checkEmail(email)
         checkPasswordMatch(password,password2)
+        console.log(checkSucceed)
+        if(checkSucceed.length===4){
+            alert('Submit Successfully')
+            arrInput.forEach(input=>{
+                input.value=''
+                input.parentElement.classList.remove('success')
+            })
+        }
     }
 })

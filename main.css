@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(120deg, #3ca7ee, #9b408f);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins',sans-serif;
+}
+.container {
+    margin:30px;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 400px;
+}
+header{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:20px;
+    font-weight: 800;
+    margin: 20px 0 30px 0;
+}
+form {
+    margin:20px 15px;
+    padding: 0 20px;
+}
+.form-control{
+    position: relative;
+    margin:35px 0;
+}
+.form-control input{
+    width: 100%;
+    font-size: 16px;
+    height:40px;
+    outline: none;
+    border:none;
+    border-bottom: 2px solid ;
+    border-color: #adadad;
+}
+.form-control span{
+    position: absolute;
+    border-bottom:2px solid #2691d9;
+    width:0%;
+    top:38px;
+    left:0;
+    transition: 0.3s;
+}
+.form-control input:focus ~span{
+    width: 100%;
+}
+.form-control.error input{
+    border-bottom:2px solid #e74c3c;
+}
+.form-control.success input{
+    border-bottom:2px solid #2691d9;
+}
+
+small{
+    position:absolute;
+    color:#e74c3c;
+    top:100%;
+    left:0;
+    margin-top:3px;
+}
+.btn-login{
+    margin:30px 0;
+    padding:10px 0;
+    width: 100%;
+    background-color: #2691d9;
+    border: none;
+    outline: none;
+    border-radius:30px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-login:hover{
+    background-color: #08609a;
+}
+.signup-link{
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+a{
+    text-decoration: none;
+}
+
+
+   
+    
